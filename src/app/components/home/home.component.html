@@ -1,11 +1,11 @@
 <div class='container'>
-        <div class="card-columns" >
-                <div class="card" *ngFor="let song of newSongs">
-                  <img class="card-img-top" [src]="song.images[0].url" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">{{ song.name }}</h5>
-                    <p class="card-text" *ngFor="let artist of song.artists"><span class="badge badge-dark">{{artist.name}}</span></p>
-                  </div>
-                </div>
+    <div class="card-columns">
+        <div class="card" *ngFor="let song of newSongs">
+            <img class="card-img-top" [src]="song.images | noimage" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ song.name }}</h5>
+                <p class="card-text" *ngFor="let artist of song.artists"><span class="badge badge-dark">{{artist.name}}</span></p>
+            </div>
         </div>
+    </div>
 </div>
