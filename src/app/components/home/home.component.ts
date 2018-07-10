@@ -15,8 +15,8 @@ export class HomeComponent {
 
     spotify.getNewRelases()
     .subscribe( (data: any) => {
-      console.log(data.albums.items);
-      this.newSongs = data.albums.items;
+      console.log(data);
+      this.newSongs = data;
     });
   }
 
